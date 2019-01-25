@@ -15,4 +15,11 @@ function createWindow () {
   win.loadFile(path.resolve('./dist/index.html'));
 }
 
-app.on('ready', createWindow);
+app
+  .on('ready', createWindow)
+  .on('window-all-closed', () => {
+    if (process.platform !== 'darwin') { app.quit(); }
+  })
+  .on('activate', () => {
+    if (win === null) { createWindow(); }
+  });
