@@ -2,7 +2,7 @@
   "name": "recursive-git",
   "version": "0.0.1",
   "description": "Manage nested git repositories",
-  "main": "dist/main.js",
+  "main": "dist/app.js",
   "scripts": {
     "compile": "tsc",
     "start": "tsc & electron .",
